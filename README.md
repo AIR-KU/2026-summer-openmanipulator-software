@@ -205,7 +205,7 @@ $$L_2 = \sqrt{a^2 + b^2} = 0.13023,
 
 ### 푸는 순서
 
-$\theta_1$ 은 수평 회전 하나로 끝나고, 나머지 셋은 $r$–$z$ 평면의 2링크
+$\theta_1$ 은 수평 회전 하나로 끝나고, 나머지 셋은 $(r, z)$ 평면의 2링크
 문제로 내려갑니다.
 
 ```
@@ -236,21 +236,21 @@ $$\cos\alpha = \frac{L_2^2 + L_3^2 - D^2}{2 L_2 L_3},
 
 $$\psi_3 = -(\pi - \alpha) \qquad \text{(팔꿈치 위 분기)}$$
 
-$$\psi_2 = \operatorname{atan2}(d_z,\, d_r)
-- \operatorname{atan2}\big(L_3 \sin\psi_3,\; L_2 + L_3 \cos\psi_3\big)$$
+$$\psi_2 = \operatorname{atan2}(d_z, d_r)
+- \operatorname{atan2}\big(L_3 \sin\psi_3, L_2 + L_3 \cos\psi_3\big)$$
 
 $\psi_2, \psi_3$ 는 순수 기하각이지 관절각이 아닙니다. 여기에 영점 오프셋과
 팀 부호 규약을 씌워야 관절각이 됩니다.
 
 ### 수식 4가지
 
-$$\boxed{\;\theta_1 = s_1 \cdot \operatorname{atan2}(y,\, x) + c_1\;}$$
+$$\boxed{\theta_1 = s_1 \cdot \operatorname{atan2}(y, x) + c_1}$$
 
-$$\boxed{\;\theta_2 = s \cdot (\psi_2 - \gamma)\;}$$
+$$\boxed{\theta_2 = s \cdot (\psi_2 - \gamma)}$$
 
-$$\boxed{\;\theta_3 = s \cdot (\psi_3 + \gamma)\;}$$
+$$\boxed{\theta_3 = s \cdot (\psi_3 + \gamma)}$$
 
-$$\boxed{\;\theta_4 = s \cdot (\Phi - \psi_2 - \psi_3)\;}$$
+$$\boxed{\theta_4 = s \cdot (\Phi - \psi_2 - \psi_3)}$$
 
 기호와 코드의 대응은 이렇습니다.
 
@@ -267,8 +267,8 @@ $$\boxed{\;\theta_4 = s \cdot (\Phi - \psi_2 - \psi_3)\;}$$
 수식 2~4를 그냥 더하면 $\psi_2, \psi_3$ 가 전부 소거됩니다.
 
 $$\theta_2 + \theta_3 + \theta_4
-= s\,(\psi_2 - \gamma) + s\,(\psi_3 + \gamma) + s\,(\Phi - \psi_2 - \psi_3)
-= s\,\Phi$$
+= s (\psi_2 - \gamma) + s (\psi_3 + \gamma) + s (\Phi - \psi_2 - \psi_3)
+= s \Phi$$
 
 **목표점이 어디든 이 합은 상수입니다.** 펜 자세가 변하지 않으니 당연한 결과인데,
 손 계산으로도 확인할 수 있어서 가장 강력한 검사가 됩니다. 이 값이 흔들리면
