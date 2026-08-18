@@ -1,0 +1,6 @@
+# OpenManipulator-X 시뮬레이션 스터디 의존성
+# 설치:  pip install -r requirements.txt
+
+pybullet>=3.2.5      # 물리 시뮬레이터 + URDF 로더
+numpy>=1.24          # 작업 영역 격자 스캔
+matplotlib>=3.7      # ik_viewer 의 2D 점 찍기 창

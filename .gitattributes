@@ -1,0 +1,8 @@
+# 줄바꿈은 저장소에 LF 로 저장하고, 체크아웃할 때 OS 에 맞춘다
+* text=auto
+
+# 메시는 바이너리. 줄바꿈 변환이 들어가면 파일이 깨진다
+*.stl binary
+
+# URDF 는 XML 텍스트
+*.urdf text
